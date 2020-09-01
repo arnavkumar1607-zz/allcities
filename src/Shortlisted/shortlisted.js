@@ -1,6 +1,5 @@
 import React from 'react';
 import * as _ from 'lodash';
-import './shortlisted.scss';
 
 class Shortlisted extends React.Component {
 
