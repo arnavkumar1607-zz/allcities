@@ -1,0 +1,60 @@
+.navigation-menu {
+  box-shadow: 0 5px 3px -3px rgba(0, 0, 0, 0.29);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  > div {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: teal;
+    > a {
+      color: #fff !important;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}
+
+.allcitiesTable {
+  text-align: center;
+  overflow: auto;
+  th {
+    background-color: wheat !important;
+    padding: 5px;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    background-color: cornsilk;
+  }
+  td {
+    font-size: 12px;
+    text-align: left;
+  }
+  .btn:hover {
+    background-color: black !important;
+    color: white !important;
+    cursor: pointer;
+    font-weight: 500;
+  }
+}
+table {
+  width: 50%;
+  margin: 0 auto;
+}
+.goToTop {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background-color: teal !important;
+  padding: 10px;
+  border-radius: 4px;
+  > span {
+    font-weight: 500;
+    color: #fff;
+    font-weight: 500;
+  }
+}
