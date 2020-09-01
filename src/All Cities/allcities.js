@@ -84,7 +84,7 @@ class Allcities extends React.Component {
                 if (localStorage.getItem('shortlisted') != undefined && localStorage.getItem('shortlisted') != 'undefined' && localStorage.getItem('shortlisted') != null) {
                     st = JSON.parse(localStorage.getItem('shortlisted'));
                 }
-                if(!_.isEmpty(st)){
+                if (!_.isEmpty(st)) {
                     st.splice(data, 1);
                     localStorage.setItem('shortlisted', JSON.stringify(st));
                 }
@@ -203,14 +203,18 @@ class Allcities extends React.Component {
                     </div>
                 </div>
                 <div className="search">
-                    <input id="city" type="textbox" name="City" placeholder="Enter City" />
-                    <input id="dist" type="textbox" name="district" placeholder="Enter District" />
-                    <input id="state" type="textbox" name="state" placeholder="Enter State" />
-                    <button class="btns" name="search" value="Search" onClick={() => this.searchItems()}>Search</button>
-                    <button class="btns" name="reset" value="Reset" onClick={() => this.resetItems()}>Reset</button>
-                    <button class="btns" name="reset" value="Reset" onClick={() => this.startaddCity()}>Add City</button>
+                    <div>
+                        <input id="city" type="textbox" name="City" placeholder="Enter City" />
+                        <input id="dist" type="textbox" name="district" placeholder="Enter District" />
+                        <input id="state" type="textbox" name="state" placeholder="Enter State" />
+                    </div>
+                    <div>
+                        <button class="btns" name="search" value="Search" onClick={() => this.searchItems()}>Search</button>
+                        <button class="btns" name="reset" value="Reset" onClick={() => this.resetItems()}>Reset</button>
+                        <button class="btns" name="reset" value="Reset" onClick={() => this.startaddCity()}>Add City</button>
+                    </div>
                 </div>
-                <div className="allcitiesTable">
+                <div className="allcitiesTable" style={{ height : window.innerHeight - 150}}>
                     <table>
                         <th>City</th>
                         <th>District</th>
@@ -219,7 +223,7 @@ class Allcities extends React.Component {
                         <th>Delete</th>
                         {this.state.cities.map((c, index) => {
                             if (c === undefined)
-                            return;
+                                return;
                             else
                                 return (
                                     <tr>

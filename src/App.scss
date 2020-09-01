@@ -18,7 +18,8 @@
 
 .allcitiesTable {
   text-align: center;
-  overflow: auto;
+  overflow: scroll;
+  margin: 10px;
   th {
     background-color: wheat !important;
     padding: 5px;
@@ -41,7 +42,6 @@
   }
 }
 table {
-  width: 50%;
   margin: 0 auto;
 }
 .goToTop {
